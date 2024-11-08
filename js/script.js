@@ -21,7 +21,7 @@ boton.addEventListener('click', () => {
                 img.style.margin = '10px'; // Styling (optional)
 
                 container.appendChild(img);
-            });
+            })
         })
         .catch(error => {
             console.error('Error fetching data:', error);
