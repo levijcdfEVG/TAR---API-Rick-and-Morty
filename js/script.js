@@ -1,5 +1,6 @@
 'use strict';
 
+//Crea variables que controlan los botones del html
 let boton = document.getElementById("mostrarImagenes");
 let botonBorrar = document.getElementById("ocultarImagenes");
 
