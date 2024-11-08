@@ -3,6 +3,7 @@
 //Crea variables que controlan los botones del html
 let boton = document.getElementById("mostrarImagenes");
 let botonBorrar = document.getElementById("ocultarImagenes");
+let container = document.getElementById("contenedorImagenes");
 
 boton.addEventListener('click', () => {
     let url = 'https://rickandmortyapi.com/api/character';
@@ -12,7 +13,6 @@ boton.addEventListener('click', () => {
         
         .then(data => {
             // Clear previous content, if any
-            let container = document.getElementById("contenedorImagenes");
             container.innerHTML = "";
 
             // Loop through characters and create image elements
@@ -33,6 +33,5 @@ boton.addEventListener('click', () => {
 
 
 botonBorrar.addEventListener('click', () =>{
-    let container = document.getElementById("contenedorImagenes");
     container.innerHTML = "";
 });
