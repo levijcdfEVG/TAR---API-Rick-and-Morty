@@ -1,12 +1,14 @@
 'use strict';
 
 let boton = document.getElementById("mostrarImagenes");
+let botonBorrar = document.getElementById("ocultarImagenes");
 
 boton.addEventListener('click', () => {
     let url = 'https://rickandmortyapi.com/api/character';
     
     fetch(url)
         .then(response => response.json())
+        
         .then(data => {
             // Clear previous content, if any
             let container = document.getElementById("contenedorImagenes");
@@ -26,4 +28,10 @@ boton.addEventListener('click', () => {
         .catch(error => {
             console.error('Error fetching data:', error);
         });
+});
+
+
+botonBorrar.addEventListener('click', () =>{
+    let container = document.getElementById("contenedorImagenes");
+    container.innerHTML = "";
 });
